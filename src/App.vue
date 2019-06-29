@@ -2,7 +2,7 @@
   <div>
     <page-header></page-header>
     <films-list :films="films"></films-list>
-    <film-detail :film="selectedFilm"></film-detail>
+    <film-detail v-if="this.selectedFilm != null" :film="selectedFilm"></film-detail>
   </div>
 </template>
 <script>
