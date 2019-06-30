@@ -1,5 +1,6 @@
 <template lang="html">
   <div class="filmslist">
+    <h2>List of films:</h2>
     <ul>
       <list-item v-for="(film, index) in films" :film="film" :key="index"></list-item>
     </ul>
@@ -20,5 +21,10 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+  ul{
+    list-style-type: none;
+    padding: 0px;
+  }
 
 </style>

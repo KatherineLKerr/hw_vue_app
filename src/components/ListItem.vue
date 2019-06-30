@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
-    <li v-bind:class="{ has_watched: has_watched }" v-on:click="handleClick">
-      <div>{{ film.title }}</div>
+    <li v-on:click="handleClick">
+      <div v-bind:class="{ has_watched: has_watched }">{{ film.title }}</div>
       <div>Watched: <button v-on:click="handleClickButton"> {{ has_watched }} </button> </div>
     </li>
   </div>
@@ -39,7 +39,6 @@ export default {
   li{
     padding: 10px;
     list-style: none;
-    background-color: lightblue;
     width: 350px;
     display: flex;
     justify-content: space-between;
@@ -47,6 +46,10 @@ export default {
 
   li:hover{
     background-color: lightgrey;
+  }
+
+  div.has_watched{
+    text-decoration: line-through;
   }
 
   button{

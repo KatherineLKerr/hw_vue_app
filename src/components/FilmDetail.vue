@@ -1,6 +1,6 @@
 <template lang="html">
   <div class='detail-box'>
-    <h3>Film Details:</h3>
+    <h2>Film Details:</h2>
     <div v-if="this.film != ''" class="film-detail">
       <h3>{{film.title}}</h3>
       <p>Released in: {{film.release_date}} </p>
