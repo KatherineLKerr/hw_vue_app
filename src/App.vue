@@ -1,8 +1,10 @@
 <template lang="html">
   <div>
     <page-header></page-header>
-    <films-list :films="films"></films-list>
-    <film-detail v-if="this.selectedFilm != null" :film="selectedFilm"></film-detail>
+    <div class="main-container">
+      <films-list :films="films"></films-list>
+      <film-detail :film="selectedFilm"></film-detail>
+    </div>
   </div>
 </template>
 <script>
@@ -16,7 +18,7 @@ export default {
   data() {
     return {
       films: [],
-      selectedFilm: null
+      selectedFilm: ""
       }
     },
     components: {
@@ -38,4 +40,8 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.main-container{
+  display: flex;
+  justify-content: space-evenly;
+}
 </style>
